@@ -10,7 +10,7 @@ import Home from './pages/home';
 function App() {
 
   return (
-    <div className='body'>
+    <div>
       <Banner />
         <Routes>
           <Route path="/" element={<Home />} />

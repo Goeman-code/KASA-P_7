@@ -1,0 +1,36 @@
+.section-1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 220px;
+    border-radius: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: url('../assets/backgroung-section.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: darken;
+}
+.section-1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    mix-blend-mode: darken;
+    opacity: 0.3;
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.section-1-texte {
+    color: white;
+    font-size: 3rem;
+    z-index: 2;
+}

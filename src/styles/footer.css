@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #ffff;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    width: 20%;
+    max-width: 125px;
+    min-width: 125px;
+}
+
+.footer-trademark {
+    display: flex;
+    justify-content: center;
+}
+.footer-trademark-text{
+    font-size: 1.4rem;
+}

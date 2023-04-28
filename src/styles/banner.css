@@ -8,6 +8,8 @@ a, a:hover, a:visited, a:active {
     justify-content: space-between;
     margin-top: 45px;
     margin-bottom: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .banner-logo {
