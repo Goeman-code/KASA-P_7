@@ -29,7 +29,7 @@ a, a:hover, a:visited, a:active {
     align-items: center;
     width: 20%;
     max-width: 300px;
-    min-width: 175px;
+    min-width: 200px;
 }
 .banner-link-links {
     color: #FF6060;

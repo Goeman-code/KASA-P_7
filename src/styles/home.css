@@ -12,7 +12,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    mix-blend-mode: darken;
 }
 .section-1::before {
     content: "";
@@ -31,6 +30,17 @@
 
 .section-1-texte {
     color: white;
-    font-size: 3rem;
+    font-size: 3.2vw;
     z-index: 2;
+}
+
+.home-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5.5%;
+    background-color: #f6f6f6;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 70px;
+    border-radius: 25px;
 }

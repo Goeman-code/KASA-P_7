@@ -1,5 +1,9 @@
+import React from "react";
+import '../styles/apropos.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 export default function apropos() {
     return (
-        <h1>APROPOS ...</h1>
+        <div className="apropos-section"></div>
     )
 }

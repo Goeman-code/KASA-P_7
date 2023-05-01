@@ -1,0 +1,30 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.error-404 {
+    color: #FF6060;
+    font-size: 250px;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+.error-oups {
+    font-weight: 100;
+    color: #FF6060;
+}
+
+.error-link {
+    margin-top: 150px;
+    color: #FF6060;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #FF6060;
+}
