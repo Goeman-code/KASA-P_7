@@ -1,0 +1,20 @@
+.slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 25px;
+    background-color: #ff6060;
+}
+
+.arrow {
+    height: auto;
+    width: 6%;
+    max-width: 52px;
+    min-width: 25px;
+    cursor: pointer;
+}
