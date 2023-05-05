@@ -9,37 +9,44 @@ import '../styles/fichelogement.css'
 export default function Fichelogement() {
 
     const currentId = useParams()
-    const logement = Logements.find(logement => logement.id = currentId )
+    const [id, setId] = useState(currentId.id.replace(":", ""))
+    const [lodging, setLodging] = useState(Logements.find(logement => logement.id === id))
+    console.log(currentId.id.replace(":", "") === lodging.id)
+    
+    useEffect(() => {
+        setId(currentId.id.replace(":", ""));
+        setLodging(Logements.find(logement => logement.id === id));
+        console.log(id)
+        console.log(lodging)
+    }, [id, currentId, lodging]);
 
-
-    const lastIndex = logement.pictures.length - 1
+    const lastIndex = lodging.pictures.length - 1
     const [image, setImage] = useState(0)
 
     const handleLeftArrowClick = () => {
         if (image === 0) {
             setImage(lastIndex)
-            console.log(image)
         } else {
             setImage(image - 1)
-            console.log(image)
         }
     }
 
     const handleRightArrowClick = () => {
         if (image === lastIndex) {
             setImage(0)
-            console.log(image)
         } else {
             setImage(image + 1)
-            console.log(image)
         }
     }
 
-    let currentImage = logement.pictures[image]
-    console.log(currentImage)
+    let currentImage = lodging ? lodging.pictures[image] : null;
 
     return (
-        <div className="slider">
+        <div className="slider" 
+        style={{ backgroundImage: `url(${currentImage})`, 
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat" }}>
             <img src={arrowLeft} alt="arrow" className="arrow" onClick={handleLeftArrowClick}></img>
             <img src={arrowRight} alt="arrow" className="arrow" onClick={handleRightArrowClick}></img>
         </div>
