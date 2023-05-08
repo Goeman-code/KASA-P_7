@@ -1,8 +1,12 @@
+.apropos-body {
+    max-width: 1440px;
+}
 .apropos-section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
+    max-width: 1180px;
     height: 220px;
     border-radius: 25px;
     margin-left: 10%;
@@ -11,4 +15,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+.apropos-collapse {
+    margin-left: 20%;
+    margin-right: 20%;
 }

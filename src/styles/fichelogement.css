@@ -1,3 +1,11 @@
+h1, p {
+    margin: 0;
+}
+
+.color {
+    color: #ff6060;
+}
+
 .slider {
     display: flex;
     justify-content: space-between;
@@ -17,4 +25,87 @@
     max-width: 52px;
     min-width: 25px;
     cursor: pointer;
+}
+
+.fichelogement-section-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    height: 75px;
+}
+.fichelogement-section-1-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+.fichelogement-section-1-proprio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.fichelogement-section-1-proprio img {
+    flex-shrink: 1;
+    width: 64px;
+    height: auto;
+    border-radius: 100px;
+    margin-left: 10px;
+}
+.host-name-shrink {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100px;
+}
+
+.fichelogement-section-2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+}
+.fichelogement-section-2-tagbox {
+    display: flex;
+    flex-direction: row;
+}
+.fichelogement-section-2-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    background-color: #ff6060;
+    color: white;
+    border-radius: 7px;
+    font-family: Montserrat-light;
+    font-size: 0.8rem;
+    font-weight: 200;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-right: 3%;
+}
+.fichelogement-section-2-stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+    max-width: 181px;
+    min-width: 151px;
+}
+.fichelogement-section-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.collapse-fichelogement {
+    width: 47%;
 }

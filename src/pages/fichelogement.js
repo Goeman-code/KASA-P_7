@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Logements from '../logements.json'
 import Collapse from '../components/collapse'
+import CollapseUl from '../components/collapseUl'
 import arrowRight from '../assets/arrow-right.svg'
 import arrowLeft from '../assets/arrow-left.svg'
+import starFull from '../assets/starFull.svg'
+import starEmpty from '../assets/starEmpty.svg'
 import '../styles/fichelogement.css'
 
 export default function Fichelogement() {
@@ -11,13 +14,10 @@ export default function Fichelogement() {
     const currentId = useParams()
     const [id, setId] = useState(currentId.id.replace(":", ""))
     const [lodging, setLodging] = useState(Logements.find(logement => logement.id === id))
-    console.log(currentId.id.replace(":", "") === lodging.id)
     
     useEffect(() => {
         setId(currentId.id.replace(":", ""));
         setLodging(Logements.find(logement => logement.id === id));
-        console.log(id)
-        console.log(lodging)
     }, [id, currentId, lodging]);
 
     const lastIndex = lodging.pictures.length - 1
@@ -40,15 +40,63 @@ export default function Fichelogement() {
     }
 
     let currentImage = lodging ? lodging.pictures[image] : null;
+    let hostName = lodging.host.name.split(" ")
+    let firstName = hostName[0]
+    let lastName = hostName[1]
 
     return (
-        <div className="slider" 
-        style={{ backgroundImage: `url(${currentImage})`, 
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat" }}>
-            <img src={arrowLeft} alt="arrow" className="arrow" onClick={handleLeftArrowClick}></img>
-            <img src={arrowRight} alt="arrow" className="arrow" onClick={handleRightArrowClick}></img>
+        <div>
+            <div className="slider" 
+            style={{ backgroundImage: `url(${currentImage})`, 
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat" }}>
+                <img src={arrowLeft} alt="arrow" className="arrow" onClick={handleLeftArrowClick}></img>
+                <img src={arrowRight} alt="arrow" className="arrow" onClick={handleRightArrowClick}></img>
+            </div>
+            <div className="fichelogement-section-1">
+                <div className="fichelogement-section-1-infos">
+                    <h1 className="color">{lodging.title}</h1>
+                    <p className="color">{lodging.location}</p>
+                </div>
+                <div className="fichelogement-section-1-proprio">
+                    <div className="host-name-shrink">
+                        <p className="color">{firstName}</p>
+                        <p className="color">{lastName}</p>
+                    </div>
+                    <img alt="propriétaire" src={lodging.host.picture} className="fichelogement-section-1-proprio-picture"
+                    style={{
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat"
+                    }}>
+                    </img>
+                </div>
+            </div>
+            <div className="fichelogement-section-2">
+                <div className="fichelogement-section-2-tagbox">
+                    {lodging.tags.map((tag) => (
+                        <div className="fichelogement-section-2-tag">
+                            <p>{tag}</p>
+                        </div>
+                    ))}
+                </div>
+                <div className="fichelogement-section-2-stars">
+                    <img src={starFull} alt="star Full" className="star"></img>
+                    <img src={starFull} alt="star Full" className="star"></img>
+                    <img src={starFull} alt="star Full" className="star"></img>
+                    <img src={starEmpty} alt="star empty" className="star"></img>
+                    <img src={starEmpty} alt="star empty" className="star"></img>
+                </div>
+            </div>
+            <div className="fichelogement-section-3">
+                <div className="collapse-fichelogement">
+                    <Collapse titre="Description" texte={lodging.description} />
+                </div>
+                <div className="collapse-fichelogement">
+                    <CollapseUl titre="Équipement" equipment={lodging.equipments} />
+                </div>
+            </div>
         </div>
     )
 

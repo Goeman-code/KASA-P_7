@@ -5,6 +5,8 @@ import '../styles/collapse.css'
 
 export default function Apropos(infos) {
     const [isOpen, setIsOpen] = useState(false);
+    const equipments = infos.equipment
+    const equipmentsListe = equipments.map((equipment) => <li>{equipment}</li>)
 
     function handleToggle() {
       setIsOpen(!isOpen);
@@ -16,8 +18,8 @@ export default function Apropos(infos) {
             <p>{infos.titre}</p>
             <img src={arrow} alt="arrow" className={`collapse-barre-arrow ${isOpen ? 'collapse-barre-arrow--open' : ''}`} onClick={handleToggle}></img>
         </div>
-        <div className={`collapse-texte-padding collapse-texte ${isOpen ? 'collapse-texte--open' : ''}`}>
-            <p className="collapse-texte-p">{infos.texte}</p>
+        <div className={`collapse-texte ${isOpen ? 'collapse-texte--open' : ''}`}>
+            <ul className="collapse-liste">{equipmentsListe}</ul>
         </div>
     </div>
     )
