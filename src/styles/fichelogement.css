@@ -18,6 +18,11 @@ h1, p {
     border-radius: 25px;
     background-color: #ff6060;
 }
+.slider-count {
+    color: white;
+    font-family: Montserrat-light;
+    margin-top: 325px;
+}
 
 .arrow {
     height: auto;
@@ -68,6 +73,7 @@ h1, p {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .fichelogement-section-2-tagbox {
     display: flex;

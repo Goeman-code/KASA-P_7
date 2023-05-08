@@ -7,7 +7,7 @@ import '../styles/apropos.css'
 export default function Apropos() {
     return (
         <div className="apropos-body">
-            <div>
+            <div className="apropos-section-margin">
                 <div className="apropos-section"></div>
             </div>
             <div className="apropos-collapse">

@@ -31,8 +31,14 @@
 .section-1-texte {
     color: white;
     font-size: 3.2vw;
+    white-space: nowrap;
     z-index: 2;
 }
+@media screen and (min-width: 1440px) {
+    .section-1-texte {
+        font-size: 46px;
+    }
+  }
 
 .home-cards {
     display: flex;

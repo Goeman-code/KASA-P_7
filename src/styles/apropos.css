@@ -16,6 +16,9 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.apropos-section-margin {
+    margin-bottom: 40px;
+}
 .apropos-collapse {
     margin-left: 20%;
     margin-right: 20%;

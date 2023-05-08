@@ -19,7 +19,7 @@ export default function Apropos(infos) {
             <img src={arrow} alt="arrow" className={`collapse-barre-arrow ${isOpen ? 'collapse-barre-arrow--open' : ''}`} onClick={handleToggle}></img>
         </div>
         <div className={`collapse-texte ${isOpen ? 'collapse-texte--open' : ''}`}>
-            <ul className="collapse-liste">{equipmentsListe}</ul>
+        <div className="inner"><ul className="collapse-liste">{equipmentsListe}</ul></div>
         </div>
     </div>
     )

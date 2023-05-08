@@ -4,6 +4,8 @@ import arrow from '../assets/arrow.svg'
 import '../styles/collapse.css'
 
 export default function Apropos(infos) {
+
+
     const [isOpen, setIsOpen] = useState(false);
 
     function handleToggle() {
@@ -17,7 +19,7 @@ export default function Apropos(infos) {
             <img src={arrow} alt="arrow" className={`collapse-barre-arrow ${isOpen ? 'collapse-barre-arrow--open' : ''}`} onClick={handleToggle}></img>
         </div>
         <div className={`collapse-texte-padding collapse-texte ${isOpen ? 'collapse-texte--open' : ''}`}>
-            <p className="collapse-texte-p">{infos.texte}</p>
+            <div className="inner"><p className="collapse-texte-p">{infos.texte}</p></div>
         </div>
     </div>
     )

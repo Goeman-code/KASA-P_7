@@ -14,5 +14,13 @@
 
 
 .body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  max-width: 1440px;
+}
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }

@@ -3,10 +3,9 @@ import { useParams } from "react-router-dom";
 import Logements from '../logements.json'
 import Collapse from '../components/collapse'
 import CollapseUl from '../components/collapseUl'
+import Stars from "../components/stars";
 import arrowRight from '../assets/arrow-right.svg'
 import arrowLeft from '../assets/arrow-left.svg'
-import starFull from '../assets/starFull.svg'
-import starEmpty from '../assets/starEmpty.svg'
 import '../styles/fichelogement.css'
 
 export default function Fichelogement() {
@@ -43,6 +42,7 @@ export default function Fichelogement() {
     let hostName = lodging.host.name.split(" ")
     let firstName = hostName[0]
     let lastName = hostName[1]
+    let numberOfStars = Number(lodging.rating)
 
     return (
         <div>
@@ -52,6 +52,7 @@ export default function Fichelogement() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat" }}>
                 <img src={arrowLeft} alt="arrow" className="arrow" onClick={handleLeftArrowClick}></img>
+                <p className="slider-count">{`${image + 1}/${lodging.pictures.length}`}</p>
                 <img src={arrowRight} alt="arrow" className="arrow" onClick={handleRightArrowClick}></img>
             </div>
             <div className="fichelogement-section-1">
@@ -81,13 +82,7 @@ export default function Fichelogement() {
                         </div>
                     ))}
                 </div>
-                <div className="fichelogement-section-2-stars">
-                    <img src={starFull} alt="star Full" className="star"></img>
-                    <img src={starFull} alt="star Full" className="star"></img>
-                    <img src={starFull} alt="star Full" className="star"></img>
-                    <img src={starEmpty} alt="star empty" className="star"></img>
-                    <img src={starEmpty} alt="star empty" className="star"></img>
-                </div>
+                <Stars rating={numberOfStars} />
             </div>
             <div className="fichelogement-section-3">
                 <div className="collapse-fichelogement">

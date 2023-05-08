@@ -10,15 +10,17 @@ import Home from './pages/home';
 function App() {
 
   return (
-    <div className='body'>
-      <Banner />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/apropos" element={<Apropos />} />
-          <Route path="/fichelogement/:id" element={<Fichelogement />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      <Footer />
+    <div className='center'>
+      <div className='body'>
+        <Banner />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/apropos" element={<Apropos />} />
+            <Route path="/fichelogement/:id" element={<Fichelogement />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        <Footer />
+      </div>
     </div>
   );
 
