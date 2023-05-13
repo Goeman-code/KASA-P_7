@@ -58,3 +58,38 @@ a, a:hover, a:visited, a:active {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+
+  @media screen and (max-width: 775px) {
+    .hover-underline-animation::after {
+        height: 1px;
+      }
+    .letters {
+        height: auto;
+        width: 20%;
+    }
+    .letters-k {
+        height: auto;
+        width: 25%;
+    }
+    .banner-logo {
+        width: 40%;
+        max-width: 160px;
+        min-width: 0px;
+    }
+    .banner {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .banner-link {
+        width: 35%;
+        max-width: 110px;
+        min-width: 110px;
+    }
+    .banner-link-links {
+        font-size: 0.8rem;
+        font-family: Montserrat-light;
+    }
+  }

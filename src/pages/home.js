@@ -2,7 +2,6 @@ import React from "react";
 import Card from '../components/cards'
 import Logements from '../logements.json'
 import '../styles/home.css'
-import { useParams } from "react-router";
 
 export default function home() {
     return (
@@ -12,7 +11,7 @@ export default function home() {
             </div>
             <div className="home-cards">
             {Logements.map((logement) => (
-                    <Card title={`${logement.title}`} cover={`${logement.cover}`} id={`${logement.id}`} />
+                    <Card title={`${logement.title}`} cover={`${logement.cover}`} id={`${logement.id}`} key={`${logement.id}`} />
                 ))}
             </div>
         </div>

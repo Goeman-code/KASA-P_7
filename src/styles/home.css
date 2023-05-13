@@ -50,3 +50,39 @@
     margin-top: 70px;
     border-radius: 25px;
 }
+
+
+@media screen and (max-width: 775px) {
+    .section-1 {
+        justify-content: flex-start;
+        width: 90%;
+        height: 110px;
+        border-radius: 10px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .section-1::before {
+        border-radius: 10px;
+    }
+    .section-1-texte {
+        font-size: 4vw;
+        font-family: Montserrat-light;
+        max-width: 51%;
+        white-space: normal;
+        margin-left: 5%;
+    }
+    .home-cards {
+        padding-bottom: 5.5%;
+        background-color: white;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 30px;
+    }
+  }
+  @media screen and (min-width: 425px) and (max-width: 775px) {
+    .section-1 {
+        width: 72%;
+        margin-left: 14%;
+        margin-right: 14%;
+    }
+}

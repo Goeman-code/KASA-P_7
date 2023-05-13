@@ -4,7 +4,9 @@ import '../styles/cards.css'
 
 export default function cards(logement) {
     return (
-        <Link to={`/fichelogement/:${logement.id}`} className="card" 
+        <Link to={`/fichelogement/:${logement.id}`} 
+        key={logement.id}
+        className="card" 
         style={{ backgroundImage: `url(${logement.cover})`, 
                 backgroundSize: "cover",
                 backgroundPosition: "center",

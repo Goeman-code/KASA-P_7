@@ -53,10 +53,18 @@
   }
 
 
-.collapse-liste {
-    font-family: Montserrat-light;
-    font-size: 1.2rem;
-    color: #ff6060;
-    margin-top: 27px;
-    margin-bottom: 10px;
-}
+  @media screen and (max-width: 770px) {
+    .collapse-barre {
+      font-size: 1rem;
+      font-family: Montserrat-light;
+      border-radius: 5px;
+      padding: 8px 2%;
+    }
+    .collapse-barre-arrow {
+      height: auto;
+      width: 75%;
+    }
+    .collapse-texte-p {
+      font-size: 1rem;
+    }
+  }

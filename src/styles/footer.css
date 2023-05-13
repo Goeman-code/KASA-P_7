@@ -28,3 +28,21 @@
 .footer-trademark-text{
     font-size: 1.2rem;
 }
+
+
+@media screen and (max-width: 775px) {
+    .footer {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-top: 50px;
+    }
+    .footer-logo {
+        margin-bottom: 15px;
+        max-width: 125px;
+        min-width: 125px;
+    }
+    .footer-trademark-text{
+        font-size: 0.9rem;
+        font-family: Montserrat-light;
+    }
+}
