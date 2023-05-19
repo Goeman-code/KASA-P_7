@@ -61,21 +61,21 @@ export default function Fichelogement() {
                         <p className="color color-titre">{lodging.title}</p>
                         <p className="color">{lodging.location}</p>
                     </div>
-                    <div className="fichelogement-section-2-tagbox">
+                    <div className="fichelogement-section-1-tagbox">
                     {lodging.tags.map((tag, index) => (
-                        <div className="fichelogement-section-2-tag" key={index}>
+                        <div className="fichelogement-section-1-tag" key={index}>
                             <p>{tag}</p>
                         </div>
                     ))}
-                </div>
+                    </div>
                 </div>
                 <div className="fichelogement-section-2">
-                    <div className="fichelogement-section-1-proprio">
+                    <div className="fichelogement-section-2-proprio">
                         <div className="host-name-shrink">
                             <p className="color">{firstName}</p>
                             <p className="color">{lastName}</p>
                         </div>
-                        <img alt="propriétaire" src={lodging.host.picture} className="fichelogement-section-1-proprio-picture"
+                        <img alt="propriétaire" src={lodging.host.picture}
                         style={{
                             backgroundSize: "cover",
                             backgroundPosition: "center",

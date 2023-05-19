@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from 'react';
 import Collapse from '../components/collapse'
 import '../styles/apropos.css'
 
